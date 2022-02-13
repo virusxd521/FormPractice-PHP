@@ -1,14 +1,26 @@
 <?php
-    require_once "./DBBlackbox.php";
-    
 
-    if($_SERVER['REQUEST_METHOD'] === 'GET'){
-            echo $_GET['id'];
-        $finding = find($_GET['id']);
-        var_dump($finding); 
-        $phone_number = $finding['phone'];
-        header( "Location: data.php?phone=".$phone_number );
+    require_once "./DBBlackbox.php";
+    // var_dump($_POST);
+    $id = $_POST['id'];
+    // update($id, );
+    $data = [];
+    foreach($_POST as $key=>$value){
+        switch($key){
+            case "name":
+            case "email":
+            case "phone":
+                $data += [$key=>$value];
+                break;    
+        }
+        
     }
 
+    update($id, $data);
+    
 
+
+    var_dump(find($id));
+
+    header( "Location: afterUpdate.php?id=".$id);
 ?>

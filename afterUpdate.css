@@ -125,39 +125,34 @@ table {
 
 body {
   background-color: turquoise;
-}
-
-.form {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin: 40px auto;
-  background-color: salmon;
-  border-radius: 15px;
-  box-shadow: 2px 2px 15px rgb(0, 0, 0);
 }
 
-.form__div {
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.main__form {
+  width: 100%;
+  margin: 50px auto;
+
   display: flex;
-  flex-direction: column;
-  width: 70%;
-}
-
-.form__div * {
-  margin: 5px 0;
-  border-radius: 5px;
-  border: none;
-  padding: 10px 0;
 }
 
 input[type="submit"] {
-  width: 20%;
-  padding: 10px;
-  border-radius: 5px;
+  margin: 0 auto;
   border: none;
+  border-radius: 5px;
+  padding: 7px 0;
+  width: 20%;
+  font-size: 17px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-input[type="submit"],
-.form__div {
-  margin: 20px auto;
+input[type="submit"]:hover {
+  cursor: pointer;
 }
